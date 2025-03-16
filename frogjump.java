@@ -1,7 +1,7 @@
 class solution{
 public static int func(int n, int heights[], int[] dp){
   if(n==0) return 0;
-  int ans = 0 , x  = INTEGER.MIN_VALUE, y = INTEGER.MAX_VALUE;
+  int ans = 0 , x  = INTEGER.MAX_VALUE, y = INTEGER.MAX_VALUE;
   if(dp[n]!=-1)
     return dp[n];
   x = func(n-1, heights, dp) + Math.abs(height[n] - heights[n-1]);
