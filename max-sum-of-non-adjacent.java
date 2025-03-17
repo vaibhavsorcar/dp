@@ -20,3 +20,27 @@ func2(int ind, int dp[], int arr[]){
   return Math.max(pick, notpick);
   }
 }
+
+
+----------------------------------------------------------------------------------------------------------------------->
+  //tabulation method
+  func1(int n, int arr[]){
+  int dp = new int[n];
+  return func2(dp, arr, n);
+}
+func2(int dp[], int arr[], int idx){
+  if(ind < 0)
+    return 0;
+  arr[0] = 0;
+  for(int i = 1; i < n ; i++){
+    int pick = arr[i];
+    if(i>1)
+      pick += dp[i-2]
+    int not = arr[i-1];
+      dp[i] = Math.max(pick, not);
+    }
+  return dp[i-1] ;
+}
+
+    
+  
